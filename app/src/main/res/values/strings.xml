@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lab4_milestone2</string>
+    <string name="title_of_app">Location 101 </string>
+    <string name="latitude_label">Latitude: </string>
+    <string name="longitude_label">Longitude: </string>
+    <string name="accuracy_label">Accuracy: </string>
+    <string name="altitude_label">Altitude: </string>
+    <string name="address_label">Address: </string>
+    <string name="not_found_text">Could not find address.</string>
+</resources>

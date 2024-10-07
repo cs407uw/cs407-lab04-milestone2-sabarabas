@@ -78,8 +78,10 @@ class MainActivity : AppCompatActivity() {
     private fun updateLocationInfo(location: Location) {
         val geocoder = Geocoder(applicationContext, Locale.getDefault())
         findViewById<TextView>(R.id.heading).text = getString(R.string.title_of_app)
-        findViewById<TextView>(R.id.alt).text = getString(R.string.altitude_label) + " ${location.altitude}"
-        findViewById<TextView>(R.id.acc).text = getString(R.string.accuracy_label) + " ${location.accuracy}"
+        findViewById<TextView>(R.id.alt).text = getString(R.string.altitude_label) + " " + location.altitude
+        findViewById<TextView>(R.id.acc).text = getString(R.string.accuracy_label) + " " + location.accuracy
+        findViewById<TextView>(R.id.lon).text = getString(R.string.longitude_label) + " " + location.longitude
+        findViewById<TextView>(R.id.lat).text = getString(R.string.latitude_label) + " " + location.latitude
 
         geocoder.getFromLocation(
             location.latitude,
@@ -95,8 +97,6 @@ class MainActivity : AppCompatActivity() {
                 if (address.postalCode != null) addressText += "${address.postalCode}\n"
                 if (address.countryName != null) addressText += "${address.countryName}"
                 findViewById<TextView>(R.id.addr).text = addressText
-                findViewById<TextView>(R.id.lon).text = getString(R.string.longitude_label) + " ${address.longitude}"
-                findViewById<TextView>(R.id.lat).text = getString(R.string.latitude_label) + " ${address.latitude}"
             } else {
                 findViewById<TextView>(R.id.addr).text = getString(R.string.address_label) + getString(R.string.not_found_text)
             }

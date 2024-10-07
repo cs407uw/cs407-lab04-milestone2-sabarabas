@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             if(addresses.isNotEmpty()) {
                 val address = addresses[0]
                 var addressText = getString(R.string.address_label)
-                if (address.subThoroughfare != null) addressText += " ${address.subThoroughfare} "
+                if (address.subThoroughfare != null) addressText += "\n${address.subThoroughfare} "
                 if (address.thoroughfare != null) addressText += "${address.thoroughfare}\n"
                 if (address.locality != null) addressText += "${address.locality}\n"
                 if (address.postalCode != null) addressText += "${address.postalCode}\n"
